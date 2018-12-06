@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { deleteSummary } from '../actions';
+import { deleteSummary } from '../actions/database';
 
 class SummaryListItem extends Component {
     deleteSummary() {

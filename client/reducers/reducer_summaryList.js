@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { FETCH_ALL_SUMMARIES, DELETE_SUMMARY } from "../actions";
+import { FETCH_ALL_SUMMARIES, DELETE_SUMMARY } from "../actions/database";
 
 export default function(state = {}, action) {
     switch(action.type) {
