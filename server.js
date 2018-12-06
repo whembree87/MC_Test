@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var cookieParser = require('cookie-parser');
 var mongoose = require('mongoose');
-var connectionString = 'mongodb://whembree87:msdfall16@ds039281.mlab.com:39281/meaningcloud';
+var connectionString = '';// ** SET MONGODB CONNECTION STRING ***
 var db = mongoose.connect(connectionString, function(err, response) {
     if(err) {
         console.log('Error ', err);
