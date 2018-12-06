@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
-import {fetchSummary} from "../actions/meaning_cloud";
-import {saveSummary} from "../actions/database";
+import {fetchSummary, saveSummary} from "../../actions/index";
 import {bindActionCreators} from "redux";
 
 import SearchBar from './SearchBar';

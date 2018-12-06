@@ -6,8 +6,8 @@ import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import NavBar from './components/NavBar';
-import Summarizer from './containers/Summarizer';
-import SummaryList from './containers/SummaryList';
+import Summarizer from './containers/summarizer/Summarizer';
+import SummaryList from './containers/summary_list/SummaryList';
 import reducers from './reducers/index';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);

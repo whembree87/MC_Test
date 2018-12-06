@@ -1,4 +1,4 @@
-import { FETCH_SUMMARY } from "../actions/meaning_cloud";
+import { FETCH_SUMMARY } from "../actions";
 
 export default function(state = {}, action) {
     switch (action.type) {

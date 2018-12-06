@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var cookieParser = require('cookie-parser');
 var mongoose = require('mongoose');
-var connectionString = 'mongodb://whembree87:msdfall16@ds039281.mlab.com:39281/meaningcloud';
+var connectionString = '';
 var db = mongoose.connect(connectionString, function(err, response) {
     if(err) {
         console.log('Error ', err);
@@ -15,8 +15,6 @@ var db = mongoose.connect(connectionString, function(err, response) {
     }
 });
 var path = require('path');
-
-require("./server/app.js")(app, db, mongoose);
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -29,7 +27,9 @@ app.use(session({
 app.use(cookieParser());
 app.use(express.static(__dirname + '/'));
 
-app.get('*', (req, res) =>{
+require("./server/app.js")(app, db, mongoose);
+
+app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 

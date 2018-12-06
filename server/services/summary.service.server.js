@@ -1,9 +1,10 @@
 module.exports = function(app, summaryModel) {
     app.get    ("/api/summaries", getAllSummaries);
 
-    app.post   ("/api/summaries", createNewSummary);
-
     app.delete ("/api/summaries/:summaryId", deleteSummary);
+
+    app.post   ("/api/summary", createNewSummary);
+
 
     function getAllSummaries(req, res) {
         summaryModel

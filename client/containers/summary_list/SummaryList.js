@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 
-import { fetchAllSummaries } from '../actions/database';
+import { fetchAllSummaries } from '../../actions';
 import SummaryListItem from './SummaryListItem';
 
 class SummaryList extends Component {

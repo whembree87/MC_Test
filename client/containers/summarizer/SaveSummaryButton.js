@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { saveSummary } from '../actions/database';
+import { saveSummary } from '../../actions/index';
 
 const SAVE_BUTTON_TEXT = "Save Summary";
 
