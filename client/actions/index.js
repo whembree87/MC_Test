@@ -40,7 +40,7 @@ export function deleteSummary(summaryId, callback) {
 
 // MeaningCloud API
 const MEANING_CLOUD_ROOT_URL = 'https://api.meaningcloud.com/summarization-1.0';
-const MEANING_CLOUD_API_KEY = '';// ** SET MEANINGCLOUD API KEY ***
+const MEANING_CLOUD_API_KEY = 'd2642ad283261958566a1ab1e4667410';// ** SET MEANINGCLOUD API KEY ***
 
 export function fetchSummary(targetUrl, sentenceTotal) {
     const bodyFormData = new FormData();
