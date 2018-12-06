@@ -8,17 +8,12 @@ var mongoose = require('mongoose');
 var path = require('path');
 
 var connectionString = 'mongodb://whembree87:msdfall16@ds039281.mlab.com:39281/meaningcloud';
-var port = 3000;
 var db = mongoose.connect(connectionString, function(err, response) {
     if(err) {
         console.log('Error ', err);
     } else {
         console.log('Success, connected to ', connectionString);
     }
-});
-
-app.get('*', (req, res) =>{
-    res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
 app.use(cors());
@@ -30,8 +25,10 @@ app.use(session({
     saveUninitialized : true
 }));
 app.use(cookieParser());
-app.use(express.static(__dirname + '/client'));
+app.use(express.static(__dirname + '/'));
 
 require("./server/app.js")(app, db, mongoose);
+
+var port = 8080;
 
 app.listen(process.env.PORT || port);
